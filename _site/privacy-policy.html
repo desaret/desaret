@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PCCBB3S8');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<title>GTOLA - Apps for improving productivity</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+<style>
+@media (min-width:519px) {
+  #container {  max-width:700px; }
+  .floatLeft50 { max-width:350px; }
+  .floatLeft33 { max-width:233px; }
+  input { width: 480px; }
+}
+@media (min-width:1038px) {
+  #container {  max-width:1024px; }
+  .floatLeft50 {  max-width:512px; }
+  .floatLeft33 { max-width:341px; }
+  input { width: 480px; }
+}
+@media (max-width:696px) {
+  #container {  max-width:341px; }
+  .floatLeft50 {  max-width:170px; }
+  .floatLeft33 { max-width:113px; }
+  input { width: 315px; }
+}
+.floatLeft50 { float:left; min-width:340px; margin-top:10px; }
+.floatLeft33 { float:left; min-width:340px; margin-top:10px;  }
+.floatRight50 { float:right; }
+.floatRight33 { float:right; }
+.clear { clear: both; }
+.spacer25 { display:block; width:0px; height:25px; }
+.spacer10 { display:block; width:0px; height:10px; }
+body { color: #111111; font-family: 'Open Sans',sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: Roboto,sans-serif; }
+#container { margin: 0 auto; }
+
+#logo img { width:64px; }
+#menu a { color: inherit; text-decoration: none; font-size: 1.125rem; }
+
+#headline { text-align: center; }
+
+
+.feature img { width:80px; display:block; margin: 0 auto; height:80px; object-fit: scale-down; } 
+.feature h2, .feature p, .feature h3 { text-align:center; }
+#taskTimeInStatusFeatures .floatLeft33 { min-height:240px; }
+.feature ul { font-size:13px; margin:0px; padding:0px; max-width:350px; display:inline; list-style-type: none; text-align:center;}
+
+input { border-color: #b3b3b3;background-color: #ffffff;color: #000000;     border-width: 1px; display: block; padding: 10px 12px; background-image: none; background-clip: padding-box; font:inherit; margin-bottom:10px;}
+input[type="submit"] { width:100px; }
+
+#footer, #footer a { font-size: 11px; color: black; }
+
+/* The Modal (background) */
+.modal {display: none; /* Hidden by default */position: fixed; /* Stay in place */z-index: 1; /* Sit on top */padding-top: 100px; /* Location of the box */left: 0;top: 0;width: 100%; /* Full width */height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */background-color: rgb(0,0,0); /* Fallback color */background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+
+/* Modal Content */
+.modal-content {background-color: #fefefe;margin: auto;padding: 20px;border: 1px solid #888;width: 80%;}
+
+/* The Close Button */
+.close {color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;}
+
+.close:hover, .close:focus {color: #000;text-decoration: none;cursor: pointer;}
+
+.modal input { display: inline;  }
+.pad5 {padding:5px;}
+
+#copyright {float:left;width:85px;}
+#terms { float:right;width:170px; }
+
+.gtButton { background-color:#478ac9; color: white;--border-radius: 50px; border-radius: 50px; padding: 10px; text-decoration: none; }
+#cardTimeInList { text-align:center; margin-bottom:45px;  }
+
+#pricing table { margin: 0 auto;  }
+#pricing table td { text-align:center; font-size:14px; border-width:1px; border-color:grey; }
+#pricing table th { background-color:black; color:white; }
+#pricing table tr { border-color:grey; background-color:white; color:black; }
+#pricing h3 { text-align:center; }
+#pricing p { text-align:center; font-style:italic; }
+#faq { text-align:center; }
+</style>
+<script>
+  function onLoad() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    var btnYes = document.getElementById("consentYes");
+    var btnNo = document.getElementById("consentNo");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+
+    btnYes.onclick=function() {
+      loadGa();
+      document.cookie = "consent=true; expires=Fri, 31 Dec 2040 23:59:59 GMT; Secure";
+      modal.style.display = "none";
+    };
+    btnNo.onclick=function() {
+      modal.style.display = "none";
+    };
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    function loadGa() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MCJPTVHDXQ');//UA-163584785-1
+    }
+
+    var x = document.cookie;
+    if(x && x.indexOf('consent')>-1) {
+      loadGa();
+    } else {
+      modal.style.display = "block";
+    }
+    
+    
+   
+    const submit = document.getElementById('btnSubmit');
+    if(submit) {
+      const msg = document.getElementById('gtMsg');
+      const name = document.getElementById('gtname');
+      const email = document.getElementById('gtemail');
+      const text = document.getElementById('gttext');
+      function handleSubmit() {
+        event.preventDefault();
+
+        if(!name.value || !email.value || !text.value) {
+          msg.innerHTML="All fields are required";
+          modal.style.display = "block";
+          return;
+        }
+        
+        const myForm = document.getElementById('gtform');
+        const formData = new FormData(myForm);
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(function(){ msg.innerHTML="Message sent! You will get a reply soon."; modal.style.display = "block";  })
+          .catch(function(){ msg.innerHTML="Failed to send message. Please reach us out at admin@gtola.com"; modal.style.display = "block";  });
+      }
+
+      submit.addEventListener("click", handleSubmit);
+    }
+  }
+</script>
+</head>
+<body onload="onLoad()">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCCBB3S8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="container">
+  <div id="header">
+    <div id="logo" class="floatLeft50" ><a href="/"><img src="/assets/logo128x128.png"></img></a></div>
+    <div id="menu" class="floatRight50"><a href="contact.html">Contact</a></div>
+    <div class="clear"></div>
+  </div>
+  
+  <div id="headline"><h1>Privacy Policy</h1></div>
+<div>
+<p>
+  The data controller for:  
+    <ul>
+      <li>the website gtola.com(website)</li>
+      <li>the GSuite add-ons Another Trello for Gmail and Post to Social Media(add-ons)</li>
+      <li>the Jira app Issue Time in Status and the Jira app Issue Time in Status Reports(apps)</li>
+      <li>the Trello Power-Up Card Time in List and Card Age(power-ups)</li>
+      <li>the monday.com app Task Time In Status(apps)</li>
+    </ul>
+    is Ketiona Agaj. Ketiona Agaj is a business entity registered in Albania with the registration code L71703038D.
+  </p>
+  <p>You are free to give or refuse consent:
+    <ul>
+      <li>For the website, you can do this immediately when you access the site for the first time</li>
+      <li>For the add-ons:
+      <ul>
+        <li>For Another Trello for Gmail you can do this during installation via GSuite Marketplace.</li>
+        <li>For Post to Social Media you can deauthorize via the add-on menus.</li>
+      </ul> 
+      </li>
+      <li>For the power-ups, you can do this when you enable the power-ups via the Power-Ups view from Trello. You are free to not authorize the power-ups from the popup menu. You can also deauthorize the power-up later from the popup menu.</li>
+      <li>For the apps, you can both install and uninstall the apps from the app management page.</li>
+    </ul>
+  </p>
+  <p>What is collected and why:
+    <ul>
+      <li>The website uses cookies only for analytical purposes. This is done just to get insights of engagement and to see what can be improved.</li>
+      <li>The add-ons collect only non-personal information through logs. This is done just to improve the add-ons or fix any bugs. More specifically:
+      <ul>
+        <li>For Another Trello for Gmail, nothing is stored or shared in the add-on with the exception of auth tokens for Trello which powers the add-on to post the message to Trello as a card only when the Gmail users clicks the button to post</li>
+        <li>For Post to Social Media, the add-on only stores tokens that grant the add-on the right to post to social media on user's behalf. Where possible such tokens are automatically refreshed so that the user does not need to re-authorize. The image files from Google Drive are posted to social networks only when the user clicks the button. Nothing is shared to any social media without the user authorizing the add-on and enabling posting to specific social media. The add-on automatically populates the text to post from the Google Drive image metadata. This is text editable prior to being posted.</li>
+      </ul>
+      </li>
+      <li>The power-ups do not store any personal information. They only store non-personal information for analytical purposes.</li>
+      <li>The apps does not store any personal information. They only store non-personal information for analytical purposes.</li>
+    </ul>
+</p>
+</div>
+  
+  <div class="spacer25"></div>
+
+  <div id="footer">
+    <div id="copyright">© 2023 GTOLA</div>
+    <div  id="terms" ><a href="terms-of-service.html">Terms of Service</a><span>  &#8226;  </span><a href="privacy-policy.html">Privacy Policy</a> </div>
+    <div class="clear"></div>
+  </div>
+  
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <span  id="gtMsg" >Website uses cookies only for analytics. Consent?
+        <br/>
+        <input id="consentYes" type="submit" name="consent" value="Yes">
+        <span>  </span>
+        <input id="consentNo" type="submit" name="consent" value="No">
+      </span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

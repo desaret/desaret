@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PCCBB3S8');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<title>GTOLA - Apps for improving productivity</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+<style>
+@media (min-width:519px) {
+  #container {  max-width:700px; }
+  .floatLeft50 { max-width:350px; }
+  .floatLeft33 { max-width:233px; }
+  input { width: 480px; }
+}
+@media (min-width:1038px) {
+  #container {  max-width:1024px; }
+  .floatLeft50 {  max-width:512px; }
+  .floatLeft33 { max-width:341px; }
+  input { width: 480px; }
+}
+@media (max-width:696px) {
+  #container {  max-width:341px; }
+  .floatLeft50 {  max-width:170px; }
+  .floatLeft33 { max-width:113px; }
+  input { width: 315px; }
+}
+.floatLeft50 { float:left; min-width:340px; margin-top:10px; }
+.floatLeft33 { float:left; min-width:340px; margin-top:10px;  }
+.floatRight50 { float:right; }
+.floatRight33 { float:right; }
+.clear { clear: both; }
+.spacer25 { display:block; width:0px; height:25px; }
+.spacer10 { display:block; width:0px; height:10px; }
+body { color: #111111; font-family: 'Open Sans',sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: Roboto,sans-serif; }
+#container { margin: 0 auto; }
+
+#logo img { width:64px; }
+#menu a { color: inherit; text-decoration: none; font-size: 1.125rem; }
+
+#headline { text-align: center; }
+
+
+.feature img { width:80px; display:block; margin: 0 auto; height:80px; object-fit: scale-down; } 
+.feature h2, .feature p, .feature h3 { text-align:center; }
+#taskTimeInStatusFeatures .floatLeft33 { min-height:240px; }
+.feature ul { font-size:13px; margin:0px; padding:0px; max-width:350px; display:inline; list-style-type: none; text-align:center;}
+
+input { border-color: #b3b3b3;background-color: #ffffff;color: #000000;     border-width: 1px; display: block; padding: 10px 12px; background-image: none; background-clip: padding-box; font:inherit; margin-bottom:10px;}
+input[type="submit"] { width:100px; }
+
+#footer, #footer a { font-size: 11px; color: black; }
+
+/* The Modal (background) */
+.modal {display: none; /* Hidden by default */position: fixed; /* Stay in place */z-index: 1; /* Sit on top */padding-top: 100px; /* Location of the box */left: 0;top: 0;width: 100%; /* Full width */height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */background-color: rgb(0,0,0); /* Fallback color */background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+
+/* Modal Content */
+.modal-content {background-color: #fefefe;margin: auto;padding: 20px;border: 1px solid #888;width: 80%;}
+
+/* The Close Button */
+.close {color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;}
+
+.close:hover, .close:focus {color: #000;text-decoration: none;cursor: pointer;}
+
+.modal input { display: inline;  }
+.pad5 {padding:5px;}
+
+#copyright {float:left;width:85px;}
+#terms { float:right;width:170px; }
+
+.gtButton { background-color:#478ac9; color: white;--border-radius: 50px; border-radius: 50px; padding: 10px; text-decoration: none; }
+#cardTimeInList { text-align:center; margin-bottom:45px;  }
+
+#pricing table { margin: 0 auto;  }
+#pricing table td { text-align:center; font-size:14px; border-width:1px; border-color:grey; }
+#pricing table th { background-color:black; color:white; }
+#pricing table tr { border-color:grey; background-color:white; color:black; }
+#pricing h3 { text-align:center; }
+#pricing p { text-align:center; font-style:italic; }
+#faq { text-align:center; }
+</style>
+<script>
+  function onLoad() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    var btnYes = document.getElementById("consentYes");
+    var btnNo = document.getElementById("consentNo");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+
+    btnYes.onclick=function() {
+      loadGa();
+      document.cookie = "consent=true; expires=Fri, 31 Dec 2040 23:59:59 GMT; Secure";
+      modal.style.display = "none";
+    };
+    btnNo.onclick=function() {
+      modal.style.display = "none";
+    };
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    function loadGa() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MCJPTVHDXQ');//UA-163584785-1
+    }
+
+    var x = document.cookie;
+    if(x && x.indexOf('consent')>-1) {
+      loadGa();
+    } else {
+      modal.style.display = "block";
+    }
+    
+    
+   
+    const submit = document.getElementById('btnSubmit');
+    if(submit) {
+      const msg = document.getElementById('gtMsg');
+      const name = document.getElementById('gtname');
+      const email = document.getElementById('gtemail');
+      const text = document.getElementById('gttext');
+      function handleSubmit() {
+        event.preventDefault();
+
+        if(!name.value || !email.value || !text.value) {
+          msg.innerHTML="All fields are required";
+          modal.style.display = "block";
+          return;
+        }
+        
+        const myForm = document.getElementById('gtform');
+        const formData = new FormData(myForm);
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(function(){ msg.innerHTML="Message sent! You will get a reply soon."; modal.style.display = "block";  })
+          .catch(function(){ msg.innerHTML="Failed to send message. Please reach us out at admin@gtola.com"; modal.style.display = "block";  });
+      }
+
+      submit.addEventListener("click", handleSubmit);
+    }
+  }
+</script>
+</head>
+<body onload="onLoad()">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCCBB3S8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="container">
+  <div id="header">
+    <div id="logo" class="floatLeft50" ><a href="/"><img src="/assets/logo128x128.png"></img></a></div>
+    <div id="menu" class="floatRight50"><a href="contact.html">Contact</a></div>
+    <div class="clear"></div>
+  </div>
+  
+  <div id="cardTimeInList">
+  <div id="headline"><h1>Task Time In Status</h1></div>
+  <h3>Be more productive with this app which lets you glance the duration of each ticket in each status</h3>
+  <br/>
+  <a href="https://auth.monday.com/oauth2/authorize?client_id=3e0fb369abb0a039d631e90ed43bf38a&response_type=install">
+                <img
+                  alt="Add to monday.com"
+                  height="42"
+                  src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/Tal/4b5d9548-0598-436e-a5b6-9bc5f29ee1d9_Group12441.png"
+                />
+  </a>
+</div>
+<div id="taskTimeInStatusFeatures" class="feature">
+  <div class="floatLeft33"><img src="/assets/duration-1.png"><h3>Measure Duration</h3><p>You can change the unit of measure to minutes, hours or days.
+We are open for suggestions in format too. Just drop as a message on the desired format to display duration.</p></div>
+  <div class="floatLeft33"><img src="/assets/report.png"><h3>Export</h3><p>Export a duration in current staus report for all board tickets as CSV.
+A CSV file containing all board tickets along with the durations in current status will be downloaded.</p></div>
+  <div class="floatLeft33"><img src="/assets/precision.png"><h3>Set Precision</h3><p>Adjust the precision of you need more accuracy.
+I.e. if you want to see portions of a day, set unit to days and decimal places to 1 in settings.</p></div>
+  <div class="floatLeft33"><img src="/assets/range.png"><h3>Color Ranges</h3><p>Change label color based on duration, exclude weekends etc. avalable in the premium version. Drop us a message if interested.
+Extend basic duration features with color ranges, excluding certain days, calculating time on board, duration until due, duration after due etc.</p></div>
+  <div class="clear"></div>
+</div>
+<div class="spacer25"></div>
+<div id="pricing">
+  <h3>Pricing</h3>
+  <p><i>$1/member/month</i> on monthly subscription<br/>or<br/><i>$10/member/year</i> on yearly subscription(saves you 2 months) <br/>14-day trial to PREMIUM or even more if requested</p>
+  <table>
+    <tr><th>Always FREE!</th><th>PREMIUM!</th></tr>
+    <tr><td>Change unit of measure</td><td>Change unit of measure</td></tr> 
+    <tr><td>Change decimal places</td><td>Change decimal places</td></tr>
+    <tr><td>-</td><td>Export to CSV, Excel .xlsx, PDF etc.</td></tr>
+    <tr><td>-</td><td>Color ranges</td></tr>
+    <tr><td>-</td><td>Exclude days i.e. weekends</td></tr>
+    <tr><td>-</td><td>Time on board vs time on status</td></tr>
+    <tr><td>-</td><td>Duration until due date</td></tr>
+    <tr><td>-</td><td>Custom format</td></tr>
+  </table>
+</div>
+<div class="spacer25"></div>
+<div id="faq">
+  <h3>FAQ</h3>
+  <div class="question">
+    <h4>Can I use Task Time In Status for FREE?</h4>
+    <p>Of course! Basic features will be forever FREE.</p>
+  </div>
+</div>
+  
+  <div class="spacer25"></div>
+
+  <div id="footer">
+    <div id="copyright">© 2023 GTOLA</div>
+    <div  id="terms" ><a href="terms-of-service.html">Terms of Service</a><span>  &#8226;  </span><a href="privacy-policy.html">Privacy Policy</a> </div>
+    <div class="clear"></div>
+  </div>
+  
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <span  id="gtMsg" >Website uses cookies only for analytics. Consent?
+        <br/>
+        <input id="consentYes" type="submit" name="consent" value="Yes">
+        <span>  </span>
+        <input id="consentNo" type="submit" name="consent" value="No">
+      </span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

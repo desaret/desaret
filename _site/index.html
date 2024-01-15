@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PCCBB3S8');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<title>GTOLA - Apps for improving productivity</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+<style>
+@media (min-width:519px) {
+  #container {  max-width:700px; }
+  .floatLeft50 { max-width:350px; }
+  .floatLeft33 { max-width:233px; }
+  input { width: 480px; }
+}
+@media (min-width:1038px) {
+  #container {  max-width:1024px; }
+  .floatLeft50 {  max-width:512px; }
+  .floatLeft33 { max-width:341px; }
+  input { width: 480px; }
+}
+@media (max-width:696px) {
+  #container {  max-width:341px; }
+  .floatLeft50 {  max-width:170px; }
+  .floatLeft33 { max-width:113px; }
+  input { width: 315px; }
+}
+.floatLeft50 { float:left; min-width:340px; margin-top:10px; }
+.floatLeft33 { float:left; min-width:340px; margin-top:10px;  }
+.floatRight50 { float:right; }
+.floatRight33 { float:right; }
+.clear { clear: both; }
+.spacer25 { display:block; width:0px; height:25px; }
+.spacer10 { display:block; width:0px; height:10px; }
+body { color: #111111; font-family: 'Open Sans',sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: Roboto,sans-serif; }
+#container { margin: 0 auto; }
+
+#logo img { width:64px; }
+#menu a { color: inherit; text-decoration: none; font-size: 1.125rem; }
+
+#headline { text-align: center; }
+
+
+.feature img { width:80px; display:block; margin: 0 auto; height:80px; object-fit: scale-down; } 
+.feature h2, .feature p, .feature h3 { text-align:center; }
+#taskTimeInStatusFeatures .floatLeft33,#cardTimeInListFeatures .floatLeft33 { min-height:240px; }
+.feature ul { font-size:13px; margin:0px; padding:0px; max-width:350px; display:inline; list-style-type: none; text-align:center;}
+
+input { border-color: #b3b3b3;background-color: #ffffff;color: #000000;     border-width: 1px; display: block; padding: 10px 12px; background-image: none; background-clip: padding-box; font:inherit; margin-bottom:10px;}
+input[type="submit"] { width:100px; }
+
+#footer, #footer a { font-size: 11px; color: black; }
+
+/* The Modal (background) */
+.modal {display: none; /* Hidden by default */position: fixed; /* Stay in place */z-index: 1; /* Sit on top */padding-top: 100px; /* Location of the box */left: 0;top: 0;width: 100%; /* Full width */height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */background-color: rgb(0,0,0); /* Fallback color */background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+
+/* Modal Content */
+.modal-content {background-color: #fefefe;margin: auto;padding: 20px;border: 1px solid #888;width: 80%;}
+
+/* The Close Button */
+.close {color: #aaaaaa;float: right;font-size: 28px;font-weight: bold;}
+
+.close:hover, .close:focus {color: #000;text-decoration: none;cursor: pointer;}
+
+.modal input { display: inline;  }
+.pad5 {padding:5px;}
+
+#copyright {float:left;width:85px;}
+#terms { float:right;width:170px; }
+
+.gtButton { background-color:#478ac9; color: white;--border-radius: 50px; border-radius: 50px; padding: 10px; text-decoration: none; }
+#cardTimeInList { text-align:center; margin-bottom:45px;  }
+
+#pricing table { margin: 0 auto;  }
+#pricing table td { text-align:center; font-size:14px; border-width:1px; border-color:grey; }
+#pricing table th { background-color:black; color:white; }
+#pricing table tr { border-color:grey; background-color:white; color:black; }
+#pricing h3 { text-align:center; }
+#pricing p { text-align:center; font-style:italic; }
+#faq { text-align:center; }
+</style>
+<script>
+  function onLoad() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    var btnYes = document.getElementById("consentYes");
+    var btnNo = document.getElementById("consentNo");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+
+    btnYes.onclick=function() {
+      loadGa();
+      document.cookie = "consent=true; expires=Fri, 31 Dec 2040 23:59:59 GMT; Secure";
+      modal.style.display = "none";
+    };
+    btnNo.onclick=function() {
+      modal.style.display = "none";
+    };
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    function loadGa() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MCJPTVHDXQ');//UA-163584785-1
+    }
+
+    var x = document.cookie;
+    if(x && x.indexOf('consent')>-1) {
+      loadGa();
+    } else {
+      modal.style.display = "block";
+    }
+    
+    
+   
+    const submit = document.getElementById('btnSubmit');
+    if(submit) {
+      const msg = document.getElementById('gtMsg');
+      const name = document.getElementById('gtname');
+      const email = document.getElementById('gtemail');
+      const text = document.getElementById('gttext');
+      function handleSubmit() {
+        event.preventDefault();
+
+        if(!name.value || !email.value || !text.value) {
+          msg.innerHTML="All fields are required";
+          modal.style.display = "block";
+          return;
+        }
+        
+        const myForm = document.getElementById('gtform');
+        const formData = new FormData(myForm);
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(function(){ msg.innerHTML="Message sent! You will get a reply soon."; modal.style.display = "block";  })
+          .catch(function(){ msg.innerHTML="Failed to send message. Please reach us out at admin@gtola.com"; modal.style.display = "block";  });
+      }
+
+      submit.addEventListener("click", handleSubmit);
+    }
+  }
+</script>
+</head>
+<body onload="onLoad()">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCCBB3S8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="container">
+  <div id="header">
+    <div id="logo" class="floatLeft50" ><a href="/"><img src="/assets/logo128x128.png"></img></a></div>
+    <div id="menu" class="floatRight50"><a href="contact.html">Contact</a></div>
+    <div class="clear"></div>
+  </div>
+  
+  <div id="addons"  class="feature">
+  <div id="headline"><h1>Productivity Addons For Your Team</h1></div>
+  <div class="floatLeft33"><a href="#jiraP"><img src="/assets/5968923.png"></img></a><div class="pad5"><h3>Jira Add-ons</h3><p>Save time by easily measuring how much time each issue has spent on a status</p></div></div>
+  <div class="floatLeft33"><a href="#trelloP"><img src="/assets/4817607.png"></img></a><div class="pad5"><h3>Trello Power-Ups</h3><p>Check card duration in certain list. Change colors depending on duration and much more</p></div></div>
+  <div class="floatLeft33"><a href="#googleP"><img src="/assets/10110386.png"></img></a><div class="pad5"><h3>Google Add-ons</h3><p>Easily post images from your drive to LinkedIn. Create a Trello card rigth from your Gmail</p></div></div>
+  <div class="clear"></div>
+  <div class="floatLeft33"><a href="#mondayP"><img src="/assets/monday.png"></img></a><div class="pad5"><h3>monday.com Apps</h3><p>Save time by easily measuring how much time each task has spent on a status</p></div></div>
+  <div class="clear"></div>
+</div>
+<div class="spacer25"></div>
+<div id="jira" class="feature">
+  <h2 id="jiraP">Atlassian Jira Add-ons</h2>
+  <div class="floatLeft50"><a href="https://marketplace.atlassian.com/apps/1227986/issue-time-in-status?hosting=cloud&tab=overview&_gl=1*p1jkef*_ga*MjEzMzM1NTUxNS4xNjk0NDk5NjI0*_ga_58HWW5ZYZR*MTY5NTcxOTMwNS4xNS4xLjE2OTU3MTkzOTAuMC4wLjA.*_ga_TBGZM58SHG*MTY5NTcxOTMwNS4xNS4xLjE2OTU3MTkzOTAuMC4wLjA."><img src="/assets/durationBold.png"></img></a><div class="pad5"><h3>Issue Time In Status</h3><p>Easily find the time spent in the current status for the issue being viewed</p>        <ul>
+        <li>No need for setup as the information is displayed immediately on the right panel along with standard Jira properties</li>
+        <li>If you click over the glance, you can get the time spent on other statuses too</li>
+      </ul>
+  </div></div>
+  <div class="floatLeft50"><a href="https://marketplace.atlassian.com/apps/1231294/issue-time-in-status-reports?hosting=cloud&tab=overview&_gl=1*cmhhom*_ga*MjEzMzM1NTUxNS4xNjk0NDk5NjI0*_ga_58HWW5ZYZR*MTY5NTcxOTMwNS4xNS4xLjE2OTU3MTkzNzUuMC4wLjA.*_ga_TBGZM58SHG*MTY5NTcxOTMwNS4xNS4xLjE2OTU3MTkzNzUuMC4wLjA."><img src="/assets/logo-2.png"></img></a><div class="pad5"><h3>Issue Time In Status Reports</h3><p>Easily find the time spent in each status for the issues</p>        <ul>
+        <li>The add-on accumulates the duration for every time the issue has been on a status</li>
+        <li>Durations are stored as custom fields that are indexed and can be used in your reports</li>
+      </ul> 
+  </div></div>
+  <div class="clear"></div>
+</div>
+<div class="spacer25"></div>
+<div id="trello" class="feature">
+  <h2 id="trelloP">Atlassian Trello Power-Ups</h2>
+  <div class="floatLeft50"><a href="card-time-in-list.html"><img src="/assets/logo.png"></img></a><div class="pad5"><h3>Card Time In List</h3><p>Through this Trello Power-Up you can measure the time a card has been sitting in the current list</p>        <ul>
+        <li>You can change the unit of measure to minutes, hours or days</li>
+        <li>Adjust the precision of you need more accuracy</li>
+        <li>Export a duration in current list report for all board cards as CSV</li>
+        <li>Change label color based on durance, exclude weekends etc. avalable in the premium version. Drop us a message if interested</li>
+      </ul>
+  </div></div>
+  <div class="floatLeft50"><a href="https://trello.com/power-ups/64e843cb27c229d4d231a4ba?_gl=1*9icgae*_ga*MjEzMzM1NTUxNS4xNjk0NDk5NjI0*_ga_WT7EYCGWHM*MTY5NTcxOTMwNS4xMi4xLjE2OTU3MTkzMDYuMC4wLjA."><img src="/assets/logoStrong.png"></img></a><div class="pad5"><h3>Card Age</h3><p>Checkout how long the card has been on the board just by looking at the badge</p></div></div>
+  <div class="clear"></div>
+</div>
+<div class="spacer25"></div>
+<div id="google" class="feature">
+  <h2 id="googleP">Google Add-ons</h2>
+  <div class="floatLeft50"><a href="https://workspace.google.com/marketplace/app/post_to_social_media/889319974334"><img src="/assets/logo-3.png"></img></a><div class="pad5"><h3>Post to Social Media</h3><p>Through the add-on you can create social media posts from Google Drive</p><ul>
+        <li>Create a post with image</li>
+        <li>Supports Linkedin invididual and pages</li>
+      </ul>
+  </div></div>
+  <div class="floatLeft50"><a href="https://workspace.google.com/marketplace/app/another_trello_for_gmail/233855396719"><img src="/assets/logoBold-1.png"></img></a><div class="pad5"><h3>Another Trello for Gmail</h3><p>Through the add-on you can create cards or comment to existing cards in Trello from Gmail</p>
+    <ul>
+        <li>Create a new card from an email's subject, message and attachments</li>
+        <li>Append email message as comment optionally</li>
+        <li>Adds a link on Trello card to the original email</li>
+        <li>Remembers previous board and list</li>
+        <li>Supports adding a due date, members and labels to the newly created card</li>
+      </ul></div></div>
+  <div class="clear"></div>
+</div>
+<div id="monday" class="feature">
+  <h2 id="mondayP">monday.com Apps</h2>
+  <div class="floatLeft50"><a href="task-time-in-status.html"><img src="/assets/task-time-in-status-logo.png"></img></a><div class="pad5"><h3>Task Time In Status</h3><p>Through this app you can measure the time a task has been sitting in the current status</p> 
+     <ul>
+        <li>You can change the unit of measure to minutes, hours or days</li>
+        <li>Adjust the precision of you need more accuracy</li>
+        <li>Export a duration in current status report for all board tickets as CSV</li>
+        <li>Change label color based on durance, exclude weekends etc. avalable in the premium version. Drop us a message if interested</li>
+      </ul>
+  </div></div>
+  <div class="clear"></div>
+</div>
+  
+  <div class="spacer25"></div>
+
+  <div id="footer">
+    <div id="copyright">© 2023 GTOLA</div>
+    <div  id="terms" ><a href="terms-of-service.html">Terms of Service</a><span>  &#8226;  </span><a href="privacy-policy.html">Privacy Policy</a> </div>
+    <div class="clear"></div>
+  </div>
+  
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <span  id="gtMsg" >Website uses cookies only for analytics. Consent?
+        <br/>
+        <input id="consentYes" type="submit" name="consent" value="Yes">
+        <span>  </span>
+        <input id="consentNo" type="submit" name="consent" value="No">
+      </span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
